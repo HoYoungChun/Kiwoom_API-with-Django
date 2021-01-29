@@ -6,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    로그인 성공<br>
-    유저 ID: {{user_id}}<br>
-    유저 이름: {{user_name}}<br>
-    계좌 번호: {{stock_account}}
+    <a href="{% url 'kiwoom_api:login' %}">
+        로그인
+    </a>
 </body>
 </html>

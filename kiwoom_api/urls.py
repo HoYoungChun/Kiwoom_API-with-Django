@@ -5,7 +5,8 @@ from . import views
 app_name = 'kiwoom_api'
 
 urlpatterns = [
-    path('', view=views.login, name='login'),
+    path('', view=views.main, name='main'),
+    path('login/', view=views.login, name='login'),
     # path('start/', game_start, name='game_start'),
     # path('login/', login, name='login'),
     # path('attack/', view=views.game_attack, name='game_attack'),

@@ -5,12 +5,21 @@ from PyQt5.QtCore import *
 from PyQt5.QAxContainer import *
 
 
+def main(request):
+    return render(request, 'kiwoom_api/main.html')
+
+
 def login(request):
     app = QApplication(sys.argv)
     win = MyWindow()
     win.show()
-    app.exec_()
-    return render(request, 'kiwoom_api/login.html')
+    # app.exec_()
+    ctx = {
+        'user_id': win.user_id,
+        'user_name': win.user_name,
+        'stock_account': win.stock_account,
+    }
+    return render(request, 'kiwoom_api/login.html', ctx)
 
 
 class MyWindow(QMainWindow):
