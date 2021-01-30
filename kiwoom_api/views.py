@@ -50,6 +50,7 @@ class MyWindow(QMainWindow):
                            1, "005930", 10, 0, "03", "")
         print("삼성전자 10주 매수완료")
 
+        # 삼성전자, 10주, 시장가주문 매도
         self.ocx.SendOrder("시장가매도", "0101", self.stock_account,
                            2, "005930", 10, 0, "03", "")
         print("삼성전자 10주 매도완료")
